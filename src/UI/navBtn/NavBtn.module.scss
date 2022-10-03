@@ -1,0 +1,11 @@
+@import '../../sass/imports.scss';
+
+.btn {
+    @include tabBtn;
+}
+
+.changeBtn {
+    @include tabBtn;
+    background: $color-white;
+    color: $color-red;
+}

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700&display=swap');
+
+@mixin font-lato {
+    font-family: 'Poppins', sans-serif;
+} 
+@mixin links {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: .2s;
+    font-weight: 600;
+    color: $color-white;
+    cursor: pointer;
+    &:hover {
+        color: $color-black;
+    }
+}
+@mixin input-style {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $color-yellow;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+@mixin centring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin tabBtn {
+    @include centring;
+    color: $color-white;
+    background: $color-red;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 $color-red;
+    width: 200px;
+    height: 50px;
+    border: none;
+    transition: 1s;
+    &:hover {
+        box-shadow: 0 0 5px 0 $color-white;
+        background: $color-white;
+        color: $color-red;
+    }
+}

@@ -1,0 +1,22 @@
+@import '../../sass/imports.scss';
+
+.productInfo {
+    min-height: 100vh;
+    color: $color-white;
+    padding: 20px 0;
+    .navBtn {
+        @include centring;
+        width: 20%;
+        margin: 0 auto 30px;
+    }
+    .productCard {
+        padding: 10px;
+        max-width: 50%;
+        margin: 0 auto;
+        background: $color-red;
+        box-shadow: 0 0 10px 10px $color-red;
+        img {
+            width: 100%;
+        }
+    }
+}

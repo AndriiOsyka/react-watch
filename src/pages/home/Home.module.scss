@@ -1,0 +1,32 @@
+@import '../../sass/imports.scss';
+
+.home {
+    min-height: 100vh;
+    background: $color-black;
+    position: relative;
+    .cart {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateY(110%);
+        z-index: 999;
+        transition: .3s;
+        .counter {
+          color: $color-black;
+          position: absolute;
+          top: 35%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          @include font-lato;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .cartImage {
+          height: 75px;
+        }
+        &:hover {
+          cursor: pointer;
+          transform: translateY(110%) scale(1.1);
+        }
+      }
+}
