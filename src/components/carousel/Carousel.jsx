@@ -71,8 +71,8 @@ const Carousel = () => {
             </div>
             <div className={cl.panel}>
                 {
-                    slides.map(slide =>
-                        <InputRadio className={cl.back} margin={margin} id={slide.id} arrow='radio' />)
+                    slides.map((slide, index) =>
+                        <InputRadio setMargin={setMargin} className={cl.back} margin={margin} id={index} arrow='radio' />)
                 }
             </div>
         </div>

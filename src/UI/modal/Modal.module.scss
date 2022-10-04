@@ -1,0 +1,63 @@
+@import '../../sass/imports.scss';
+
+.modal {
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $color-black-transparent;
+    z-index: 998;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modalContent {
+        padding: 25px;
+        background: $color-white;
+        color: $color-black;
+        box-shadow: 0px 0px 5px 0 rgba($color-white, 1);
+        max-width: 900px;
+        z-index: 998;
+        position: relative;
+        .close {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: $color-red;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+            z-index: 999;
+            cursor: pointer;
+            transition: .1s;
+            &:hover {
+                background: $color-red-brown;
+            }
+            &::before {
+                content: '';
+                width: 10px;
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                background: $color-white;
+            }
+            &::after {
+                content: '';
+                height: 10px;
+                width: 1px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+                background: $color-white;
+            }
+        }
+    }
+}

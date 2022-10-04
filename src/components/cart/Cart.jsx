@@ -51,8 +51,11 @@ const Cart = () => {
             <div className={cl.cartBody}>
             {
                 cart.length < 1 ?
-                    <div>Cart is empty</div>
-                : corrArr.map(product => <CartCard id={id} getId={setIdF} data={product} />)
+                    <div style={{textAlign: 'center'}}>Cart is empty</div>
+                : <div>
+                    <div style={{textAlign: 'center', marginBottom: '20px'}}>Your Products</div>
+                    <div className={cl.cartBody}>{corrArr.map(product => <CartCard id={id} getId={setIdF} data={product} />)}</div>
+                </div>
             }
             </div>
             {cart.length > 0 && <div className={cl.totalPrice}>
